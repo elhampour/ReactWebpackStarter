@@ -6,12 +6,16 @@ import { createBrowserHistory } from 'history';
 // Containers
 import Full from './containers/Full/'
 
+// Views
+import Login from './views/Pages/Login/'
+
 const history = createBrowserHistory();
 
 ReactDOM.render((
   <HashRouter history={history}>
     <Switch>
-      <Route path="/" name="Home" component={Full}/>
+      <Route exact path="/login" name="Login Page" component={Login} />
+      <Route path="/" name="Home" component={Full} />
     </Switch>
   </HashRouter>
 ), document.getElementById('root'))
